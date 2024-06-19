@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #72b7f3;
+}
+
+.elegir {
+    margin-bottom: 20px;
+}
+
+.elegir button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #9b59b6;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0 10px;
+}
+
+.toggle-buttons button:hover {
+    background: #71b7e6;
+}
+
+.autentificacion, .registrarse {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    border: 2px solid #9b59b6;
+}
+
+.autentificacion h1, .registrarse h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.cajas {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.cajas label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.cajas input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #9b59b6;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #71b7e6;
+}
+
+.imagen {
+    display: block;
+    margin: 0 auto 1rem;
+    max-width: 100px;
+}
+
+.oculto {
+    display: none;
+}
