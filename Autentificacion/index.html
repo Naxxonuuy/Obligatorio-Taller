@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="Js/funciones.js"></script>
+</head>
+<body>
+    <div class="elegir">
+        <button id="idBotonIniciarSesion">Iniciar Sesión</button>
+        <button id="idBotonRegistrarse">Registrarse</button>
+    </div>
+    <div id="idAutentificacion" class="autentificacion">
+        <img src="img/Contrasenas.jpg" alt="No deberia pasar" class="imagen">
+        <h1>Iniciar Sesión</h1>
+        <form>
+            <div class="cajas">
+                <label for="idUsuario">Usuario</label>
+                <input type="text" id="idUsuario" name="usuario" required>
+            </div>
+            <div class="cajas">
+                <label for="idContraseña">Contraseña</label>
+                <input type="password" id="idContraseña" name="contraseña" required>
+            </div>
+            <button type="submit" id="idIngresar">Ingresar</button>
+        </form>
+    </div>
+    <div id="idRegistrar" class="registrarse">
+        <img src="img/Contrasenas.jpg" alt="No deberia pasar" class="imagen">
+        <h1>Registrarse</h1>
+        <form>
+            <div class="cajas">
+                <label for="idUsuarioReg">Usuario</label>
+                <input type="text" id="idUsuarioReg" name="usuarioReg" required>
+            </div>
+            <div class="cajas">
+                <label for="idContraseñaReg">Contraseña</label>
+                <input type="password" id="idContraseñaReg" name="contraseñaReg" required>
+            </div>
+            <button type="submit" id="idRegistrar">Registrarse</button>
+        </form>
+    </div>
+</body>
+</html>
