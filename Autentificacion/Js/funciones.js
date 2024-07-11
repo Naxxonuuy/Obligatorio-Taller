@@ -179,8 +179,8 @@ function comprarProducto(nombreProducto) {
     }
 }
 
-// Ejemplo de agregar usuarios y productos predefinidos para pruebas
+// Admin admin como logg
 sistema.registrarUsuario(new Usuarios("Admin", "Admin"));
-sistema.agregarProducto(new Productos("Producto 1", "Descripción del producto 1", 100, 10));
-sistema.agregarProducto(new Productos("Producto 2", "Descripción del producto 2", 200, 5));
+sistema.agregarProducto(new Productos("PeraPod", "Para hacer llamadas", 100, 10));
+sistema.agregarProducto(new Productos("Compu", "Pa jugar", 200, 5));
 mostrarProductosDisponibles();
