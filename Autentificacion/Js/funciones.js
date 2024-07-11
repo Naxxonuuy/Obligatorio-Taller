@@ -178,9 +178,3 @@ function comprarProducto(nombreProducto) {
         alert("Producto no disponible");
     }
 }
-
-// Admin admin como logg
-sistema.registrarUsuario(new Usuarios("Admin", "Admin"));
-sistema.agregarProducto(new Productos("PeraPod", "Para hacer llamadas", 100, 10));
-sistema.agregarProducto(new Productos("Compu", "Pa jugar", 200, 5));
-mostrarProductosDisponibles();
