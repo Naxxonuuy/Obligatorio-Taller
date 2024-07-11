@@ -165,3 +165,16 @@ function mostrarProductosDisponibles() {
         listaProductos.appendChild(productoDiv);
     });
 }
+
+function comprarProducto(nombreProducto) {
+    const productos = sistema.obtenerProductos();
+    const producto = productos.find(prod => prod.nombre === nombreProducto);
+
+    if (producto && producto.stock > 0) {
+        producto.stock -= 1;
+        alert(`Has comprado ${nombreProducto}`);
+        mostrarProductosDisponibles();
+    } else {
+        alert("Producto no disponible");
+    }
+}
