@@ -82,18 +82,6 @@ function mostrarRegistrar() {
     mostrarId("idRegistrar");
 }
 
-function mostrarProductos() {
-    if (usuarioLogeado) {
-        ocultarId("idAutentificacion");
-        ocultarId("idRegistrar");
-        mostrarId("idProductos");
-        mostrarProductosDisponibles();
-    } else {
-        alert("Debe iniciar sesión primero.");
-        mostrarAutentificacion();
-    }
-}
-
 function iniciarSesion() {
     const usuario = document.getElementById("idUsuario").value;
     const contraseña = document.getElementById("idContraseña").value;
@@ -130,57 +118,3 @@ function cerrarSesion() {
     mostrarAutentificacion();
 }
 
-function agregarProducto() {
-    const nombre = document.getElementById("idNombreProducto").value;
-    const descripcion = document.getElementById("idDescripcionProducto").value;
-    const precio = document.getElementById("idPrecioProducto").value;
-    const stock = document.getElementById("idStockProducto").value;
-
-    if (nombre && descripcion && precio && stock) {
-        const producto = new Productos(nombre, descripcion, precio, stock);
-        sistema.agregarProducto(producto);
-        mostrarProductosDisponibles();
-    }
-}
-
-function mostrarProductosDisponibles() {
-    const listaProductos = document.getElementById("idListaProductos");
-    if (!listaProductos) {
-        console.error("Elemento idListaProductos no encontrado.");
-        return;
-    }
-    listaProductos.innerHTML = "";
-
-    const productos = sistema.obtenerProductos();
-    productos.forEach(prod => {
-        const productoDiv = document.createElement("div");
-        productoDiv.classList.add("producto");
-        productoDiv.innerHTML = `
-            <h2>${prod.nombre}</h2>
-            <p>${prod.descripcion}</p>
-            <p>Precio: $${prod.precio}</p>
-            <p>Stock: ${prod.stock}</p>
-            <button onclick="comprarProducto('${prod.nombre}')">Comprar</button>
-        `;
-        listaProductos.appendChild(productoDiv);
-    });
-}
-
-function comprarProducto(nombreProducto) {
-    const productos = sistema.obtenerProductos();
-    const producto = productos.find(prod => prod.nombre === nombreProducto);
-
-    if (producto && producto.stock > 0) {
-        producto.stock -= 1;
-        alert(`Has comprado ${nombreProducto}`);
-        mostrarProductosDisponibles();
-    } else {
-        alert("Producto no disponible");
-    }
-}
-
-// Ejemplo de agregar usuarios y productos predefinidos para pruebas
-sistema.registrarUsuario(new Usuarios("Admin", "Admin"));
-sistema.agregarProducto(new Productos("Producto 1", "Descripción del producto 1", 100, 10));
-sistema.agregarProducto(new Productos("Producto 2", "Descripción del producto 2", 200, 5));
-mostrarProductosDisponibles();
