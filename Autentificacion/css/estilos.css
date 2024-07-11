@@ -16,6 +16,9 @@ body {
 
 .elegir {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Alinea los elementos al centro */
+    width: 80%;
 }
 
 .elegir button {
@@ -30,7 +33,7 @@ body {
     margin: 0 10px;
 }
 
-.toggle-buttons button:hover {
+.elegir button:hover {
     background: #71b7e6;
 }
 
@@ -42,9 +45,27 @@ body {
     text-align: center;
     width: 300px;
     border: 2px solid #9b59b6;
+    margin-bottom: 20px;
 }
 
-.autentificacion h1, .registrarse h1 {
+.productos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.alta-productos, .productos-disponibles {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    border: 2px solid #9b59b6;
+    box-sizing: border-box;
+}
+
+h1 {
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
     color: #333;
@@ -92,4 +113,12 @@ button:hover {
 
 .oculto {
     display: none;
+}
+
+.producto {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
 }

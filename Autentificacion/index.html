@@ -11,11 +11,14 @@
     <div class="elegir">
         <button id="idBotonIniciarSesion">Iniciar Sesión</button>
         <button id="idBotonRegistrarse">Registrarse</button>
+        <button id="idBotonProductos" class="oculto">Productos</button>
+        <button id="idBotonCerrarSesion" class="oculto">Cerrar Sesión</button>
+        <span id="usuarioActual" class="oculto"></span>
     </div>
     <div id="idAutentificacion" class="autentificacion">
         <img src="img/Contrasenas.jpg" alt="No deberia pasar" class="imagen">
         <h1>Iniciar Sesión</h1>
-        <form>
+        <form id="formIniciarSesion">
             <div class="cajas">
                 <label for="idUsuario">Usuario</label>
                 <input type="text" id="idUsuario" name="usuario" required>
@@ -24,13 +27,13 @@
                 <label for="idContraseña">Contraseña</label>
                 <input type="password" id="idContraseña" name="contraseña" required>
             </div>
-            <button type="submit" id="idIngresar">Ingresar</button>
+            <button type="submit">Ingresar</button>
         </form>
     </div>
-    <div id="idRegistrar" class="registrarse">
+    <div id="idRegistrar" class="registrarse oculto">
         <img src="img/Contrasenas.jpg" alt="No deberia pasar" class="imagen">
         <h1>Registrarse</h1>
-        <form>
+        <form id="formRegistrarUsuario">
             <div class="cajas">
                 <label for="idUsuarioReg">Usuario</label>
                 <input type="text" id="idUsuarioReg" name="usuarioReg" required>
@@ -39,8 +42,36 @@
                 <label for="idContraseñaReg">Contraseña</label>
                 <input type="password" id="idContraseñaReg" name="contraseñaReg" required>
             </div>
-            <button type="submit" id="idRegistrar">Registrarse</button>
+            <button type="submit">Registrarse</button>
         </form>
+    </div>
+    <div id="idProductos" class="productos-container oculto">
+        <div class="alta-productos">
+            <h1>Alta de Productos</h1>
+            <form id="formAgregarProducto">
+                <div class="cajas">
+                    <label for="idNombreProducto">Nombre del Producto</label>
+                    <input type="text" id="idNombreProducto" name="nombreProducto" required>
+                </div>
+                <div class="cajas">
+                    <label for="idDescripcionProducto">Descripción</label>
+                    <input type="text" id="idDescripcionProducto" name="descripcionProducto" required>
+                </div>
+                <div class="cajas">
+                    <label for="idPrecioProducto">Precio</label>
+                    <input type="number" id="idPrecioProducto" name="precioProducto" required>
+                </div>
+                <div class="cajas">
+                    <label for="idStockProducto">Stock</label>
+                    <input type="number" id="idStockProducto" name="stockProducto" required>
+                </div>
+                <button type="button" id="idAgregarProducto">Agregar Producto</button>
+            </form>
+        </div>
+        <div class="productos-disponibles">
+            <h1>Productos Disponibles</h1>
+            <div id="idListaProductos"></div>
+        </div>
     </div>
 </body>
 </html>
